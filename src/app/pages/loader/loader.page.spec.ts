@@ -2,6 +2,7 @@ import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angul
 import { LoaderPage } from './loader.page';
 import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { Router } from '@angular/router';
 
 describe('LoaderPage', () => {
   let component: LoaderPage;
@@ -20,7 +21,7 @@ describe('LoaderPage', () => {
     fixture = TestBed.createComponent(LoaderPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    router = TestBed.get(Router);
+    router = TestBed.get(Router); //membuat instance layanan/komponen
   });
 
   it('should go to login page after load', fakeAsync(() => {
